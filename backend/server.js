@@ -19,7 +19,10 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
+.catch(err => {
+  console.log('MongoDB connection error:', err);
+  process.exit(1);
+});
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
