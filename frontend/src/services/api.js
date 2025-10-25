@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://backend-jr6tc228k-bashas-projects.vercel.app/api' });
+const API = axios.create({ baseURL: 'https://backend-jv4eminnh-bashas-projects.vercel.app/api' });
 
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token');
